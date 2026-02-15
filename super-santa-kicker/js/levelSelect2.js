@@ -99,9 +99,12 @@ function lsClick(pointer) {
     var b = lsButs[i];
     if (b.getBounds().contains(pointer.x, pointer.y)) {
       clickSound();
+      try {
       levl = b.lnr;
-      if (parent && parent.cmgGameEvent) {
+      if (parent && typeof parent.cmgGameEvent === 'function') {
         parent.cmgGameEvent('start', levl.toString());
+      }
+      } catch (e) {
       }
       takeScreenShot();
       newState();
