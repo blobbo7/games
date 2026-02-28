@@ -8,6 +8,18 @@
   <title>Unity WebGL Player | Apes vs Helium</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
+    	  <script>
+      window.fileMergerConfig = {
+        files: [
+          { name: 'AVHPort.data.unityweb', parts: 3 },
+          { name: 'AVHPort.wasm.code.unityweb', parts: 2 },
+        ],
+        basePath: 'Build/',
+        debug: true
+      };
+    </script>
+
+    <script src="merge.js"></script>
   <script src="TemplateData/UnityProgress.js" type="53a07659885f7579d0670c7e-text/javascript"></script>
   <script src="Build/UnityLoader.js" type="53a07659885f7579d0670c7e-text/javascript"></script>
   <script type="53a07659885f7579d0670c7e-text/javascript">
