@@ -18,10 +18,9 @@
   </div>
 
   <div id="loadingBar" style="color:white; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); font-family:Arial;">
-    Loading... <span id="pct">0%</span>
+    loading... <span id="pct">0%</span>
   </div>
 <script>
-  // Stub Firebase functions the game calls internally
   function firebaseLogEvent(event_name) {
     console.log('firebaseLogEvent (stubbed):', event_name);
   }
@@ -32,6 +31,17 @@
     console.log('firebaseSetUserProperties (stubbed):', props);
   }
 </script>
+        <script>
+      window.fileMergerConfig = {
+        files: [
+          { name: 'tung-sahur-horror-v25051505.data.unityweb', parts: 2 },
+        ],
+        basePath: 'Build/',
+        debug: true
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/merge.js"></script>
   <script>
     var canvas = document.getElementById("unity-canvas");
     var container = document.getElementById("gameContainer");
