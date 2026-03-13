@@ -12,10 +12,10 @@ const runtimeData = (function() {
     // File references.
     buildURL: "bin",
     loaderURL: "bin/REPO-GameYG_Web_YandexGames.loader.js",
-    dataURL: "bin/REPO-GameYG_Web_YandexGames.data.gz",
+    dataURL: "bin/REPO-GameYG_Web_YandexGames.data",
     frameworkURL: "bin/REPO-GameYG_Web_YandexGames.framework.js",
     workerURL: "",
-    codeURL: "bin/REPO-GameYG_Web_YandexGames.wasm.gz",
+    codeURL: "bin/REPO-GameYG_Web_YandexGames.wasm",
     symbolsURL: "",
     streamingURL: "streaming",
 
