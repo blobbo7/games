@@ -2,8 +2,7 @@
 
 <html lang="en-us">
   <head>
-    <meta
-      http-equiv="Content-Security-Policy"    />
+    <meta http-equiv="Content-Security-Policy" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
@@ -332,39 +331,37 @@
       function InitGame() {
         initGame = true;
 
-        if (IsLocalHost()) {
-          ygGameInstance.SendMessage(
-            "YG2Instance",
-            "SetEnvirData",
-            JSON.stringify({
-              language: "en",
-              domain: "com",
-              deviceType: "desktop",
-              isMobile: false,
-              isDesktop: true,
-              isTablet: false,
-              isTV: false,
-              appID: "local",
-              browserLang: "en",
-              payload: null,
-              platform: navigator.platform,
-              browser: "Chrome",
-            }),
-          );
-          ygGameInstance.SendMessage(
-            "YG2Instance",
-            "SetAuth",
-            JSON.stringify({
-              playerAuth: "resolved",
-              playerName: "Player",
-              playerId: "local_player",
-              playerPhoto: "no data",
-              payingStatus: "unknown",
-            }),
-          );
-          ygGameInstance.SendMessage("YG2Instance", "SetLoadSaves", "no data");
-          ygGameInstance.SendMessage("YG2Instance", "InitSDKComplete");
-        }
+        ygGameInstance.SendMessage(
+          "YG2Instance",
+          "SetEnvirData",
+          JSON.stringify({
+            language: "en",
+            domain: "com",
+            deviceType: "desktop",
+            isMobile: false,
+            isDesktop: true,
+            isTablet: false,
+            isTV: false,
+            appID: "local",
+            browserLang: "en",
+            payload: null,
+            platform: navigator.platform,
+            browser: "Chrome",
+          }),
+        );
+        ygGameInstance.SendMessage(
+          "YG2Instance",
+          "SetAuth",
+          JSON.stringify({
+            playerAuth: "resolved",
+            playerName: "Player",
+            playerId: "local_player",
+            playerPhoto: "no data",
+            payingStatus: "unknown",
+          }),
+        );
+        ygGameInstance.SendMessage("YG2Instance", "SetLoadSaves", "no data");
+        ygGameInstance.SendMessage("YG2Instance", "InitSDKComplete");
 
         setTimeout(function () {
           if (isPausedGame == true) YG2Instance("SetPauseGame", "true");
