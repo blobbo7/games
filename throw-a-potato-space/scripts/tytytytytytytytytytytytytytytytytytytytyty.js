@@ -2178,7 +2178,7 @@ window.C3_IsSupported &&
     projectScripts: [],
     mainProjectScript: "",
     scriptFolder: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/throw-a-potato-space/scripts/",
-    workerDependencyScripts: ["box2d.wasm.js"],
+    workerDependencyScripts: ["https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/throw-a-potato-space/box2d.wasm.js"],
     exportType: "html5",
   }));
 ("use strict");
